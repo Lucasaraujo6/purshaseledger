@@ -1,3 +1,16 @@
+# TODO
+
+- conhecer a função de abertura de imagem. Se for da câmera ela salva na galeria?
+- entender como enviar a imagem para o backend. Criar o backend em python.
+- criar funções de login
+- criar o salvamento dos dados. Talvez na minha máquina. Verificar.
+- 
+
+
+
+
+
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
