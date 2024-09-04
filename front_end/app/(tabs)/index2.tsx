@@ -1,34 +1,34 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet, Image, Platform } from 'react-native';
-
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-
+import { pickImage } from '@/scripts/api';
 import React from 'react';
 import { View, Button } from 'react-native';
 // import ImagePicker from 'react-native-image-crop-picker';
 import * as ImagePicker from 'expo-image-picker';
+import axios from 'axios';
+
 export default function TabTwoScreen() {
-  const pickImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      mediaTypes: ImagePicker.MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [4, 3],
-      quality: 1,
-    });
+  // const pickImage = async () => {
+  //   let result = await ImagePicker.launchImageLibraryAsync({
+  //     mediaTypes: ImagePicker.MediaTypeOptions.Images,
+  //     allowsEditing: true,
+  //     aspect: [4, 3],
+  //     quality: 1,
+  //   });
   
-    if (!result.canceled) {
-      console.log(result.assets[0].uri);
-    }
-  };
+  //   if (!result.canceled) {
+  //     console.log(result.assets[0].uri);
+  //   }
+  // };
+
+
+
   
-//   return (
-//     
-//   );
-// }
   const [image, setImage] = React.useState<string | null>(null);
   return (
     <ParallaxScrollView
@@ -36,7 +36,9 @@ export default function TabTwoScreen() {
       headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
        <Button title="Escolher Imagem" onPress={pickImage} />
-       {/* {image && <Image source={{ uri: image }} style={{ width: 300, height: 400 }} />} */}
+       {image && <Image source={{ uri: image }} 
+      //  style={{ width: 300, height: 400 }} 
+       />}
      </View>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explorer</ThemedText>
