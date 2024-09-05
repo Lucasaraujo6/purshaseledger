@@ -10,6 +10,10 @@ if not os.path.exists(UPLOAD_FOLDER):
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    return jsonify({'message': 'pong'}), 200
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'image' not in request.files:

@@ -8,10 +8,11 @@ import { ThemedView } from '@/components/ThemedView';
 import { pickImage } from '@/scripts/api';
 import React from 'react';
 import { View, Button } from 'react-native';
-// import ImagePicker from 'react-native-image-crop-picker';
 import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
+// import ImagePicker from 'react-native-image-crop-picker';
 
+import { useEffect } from 'react';
 export default function TabTwoScreen() {
   // const pickImage = async () => {
   //   let result = await ImagePicker.launchImageLibraryAsync({
@@ -26,9 +27,25 @@ export default function TabTwoScreen() {
   //   }
   // };
 
+  // await axios.get('http://127.0.0.1:5000/ping');
 
 
-  
+    useEffect(() => {
+      const pingServer = async () => {
+        try {
+          axios({
+            method: 'get',
+            url: `http://127.0.0.1:5000/ping`,
+          }).then((response) => {
+            console.log(response.data);
+          });
+        } catch (error) {
+          console.error('Erro ao fazer ping no servidor:', error);
+        }
+      };
+
+      pingServer();
+    }, []);
   const [image, setImage] = React.useState<string | null>(null);
   return (
     <ParallaxScrollView
