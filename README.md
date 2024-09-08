@@ -7,7 +7,17 @@
 - 
 
 
+# front
+cd front_end
+npx expo start -c
 
+# Back
+cd back_end
+python3 back.py
+
+# ngrok
+ngrok http 5000
+or
 
 
 
