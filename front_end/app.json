@@ -15,14 +15,14 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.purshaseledger.iosbundle",
-      "googleServicesFile": "./GoogleService-Info.plist",
+      "googleServicesFile": "./hooks/ios/frontend.xcodeproj/GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "googleServicesFile": "./google-services.json",
+      "googleServicesFile": "./android/app/google-services.json",
       "package": "com.android_package"
     },
     "web": {
