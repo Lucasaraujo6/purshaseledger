@@ -18,7 +18,7 @@ python3 back.py
 # ngrok
 ngrok http 5000
 or
-
+ngrok http 5000 --request-header-remove "X-Forwarded-For,X-Forwarded-Host,X-Forwarded-Proto"
 
 
 # Welcome to your Expo app 👋
