@@ -23,7 +23,7 @@
         "backgroundColor": "#ffffff"
       },
       "googleServicesFile": "./android/app/google-services.json",
-      "package": "com.android_package"
+      "package": "com.frontend"
     },
     "web": {
       "bundler": "metro",
