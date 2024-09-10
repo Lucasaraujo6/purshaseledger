@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841515657472",
+    "project_id": "art-no-codo",
+    "storage_bucket": "art-no-codo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841515657472:android:7b9a0dff67afb1e129ebe5",
+        "android_client_info": {
+          "package_name": "com.android_package"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841515657472-pk6nudkait56gnihsukjpkqq7gqqv0mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCURtL5C4hB_DmAVfCB-4xRSjUQO9Q0OGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841515657472-pk6nudkait56gnihsukjpkqq7gqqv0mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
